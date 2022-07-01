@@ -6,6 +6,7 @@ import openmatrix
 def open_skims(
     skims_filename="FromSANDAG-Files/traffic_skims_AM.omx",
     data_dir=None,
+    mode="r"
 ):
 
     if data_dir is not None:
@@ -18,7 +19,7 @@ def open_skims(
     try:
         s = openmatrix.open_file(
             skims_filename,
-            mode="r",
+            mode=mode,
         )
         return s
 
